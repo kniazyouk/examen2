@@ -21,6 +21,6 @@ Route::get('triangulo', function(){
     return view('trianguloR');
 });
 */
-Route::get('triangulo', 'TrianguloController@trianguloR');
+Route::get('triangulo', 'TrianguloController@triangulo');
 
 Route::post('solucion', ['as' => 'result.hipotenusa', 'uses' => 'TrianguloController@solucion']);

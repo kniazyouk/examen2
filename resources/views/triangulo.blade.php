@@ -15,18 +15,21 @@
         <h1>Calcular la Hipotenusa de un Triangulo Rectangulo</h1>
     </header>
     <div class="container">
-    @csrf
+
+      <!--<h2>(Hipotenusa)2 = (Cateto a)2 + (Cateto b)2</h2>-->
       <h2>(c)2 = (a)2 + (b)2</h2>
+      <br><br>
         <form action="{{ route('result.hipotenusa') }}" method="post"> 
+        @csrf
             <div class="form-group">
                 <label for="cateto_a">Cateto a</label>
-                <input class="form-control" type="number" id="cateto_a" placeholder="introduce el primer cateto numero">
+                <input class="form-control" type="number" name="cateto_a" id="cateto_a" placeholder="introduce el primer cateto numero">
             </div>
             <div class="form-group">
                 <label for="cateto_b">Cateto b</label>
-                <input class="form-control" type="number" id="cateto_b" placeholder="introduce el segundo cateto numero">
+                <input class="form-control" type="number" name="cateto_b" id="cateto_b" placeholder="introduce el segundo cateto numero">
             </div>
-            <button class="btn btn-secondary" type="submit">Calcular la Hipotenusa</button>
+            <button class="btn btn-secondary">Calcular la Hipotenusa</button>
         </form>
     
     </div>

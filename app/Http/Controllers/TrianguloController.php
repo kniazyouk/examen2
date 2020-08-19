@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class TrianguloController extends Controller
 {
-    public function trianguloR()
+    public function triangulo()
     {
-        return view('trianguloR');
+        return view('triangulo');
     }
 
     public function solucion(Request $request)
@@ -20,6 +20,10 @@ class TrianguloController extends Controller
         
         $hipotenusa = sqrt($c);
 
-        return view('solucion', [$hipotenusa]);
+        return view('solucion', [
+            'cateto_a' => $a,
+            'cateto_b' => $b,
+            'hip' => $hipotenusa
+        ]);
     }
 }
