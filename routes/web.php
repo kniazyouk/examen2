@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+/*
+Route::get('triangulo', function(){
+    return view('trianguloR');
+});
+*/
+Route::get('triangulo', 'TrianguloController@trianguloR');
+
+Route::post('solucion', ['as' => 'result.hipotenusa', 'uses' => 'TrianguloController@solucion']);
