@@ -15,9 +15,9 @@
         <h1>Los correspondientes Catetos dan la siguiente hipotenuesa</h1>
     </header>     
     <div class="container">
-
+    @csrf
         <h1>El resultado de los catetos ingresados es...</h1>
-        <h2><span class="text-primary">{{ $hipotenusa }}</span></h2>
+        <h2><span class="text-primary">{{ $hip }}</span></h2>
         
     </div>
 
